@@ -1,6 +1,6 @@
 # Portfolio-RohitK
 
-Single page Portfolio web page using HTML
+Single page Portfolio web page using HTML for Rohit Kumar.
 
 ## App Preview
 
