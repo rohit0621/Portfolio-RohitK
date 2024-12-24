@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio of Rohit Kumar" />
+    <title>Rohit Kumar - Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Basic Reset and Fonts */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f4f4;
+      }
+
+      /* Header and Navigation */
+      header {
+        background: #333;
+        color: white;
+        padding: 1rem 2rem;
+      }
+      header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header nav ul {
+        list-style: none;
+        display: flex;
+      }
+      header nav ul :first-child {
+        margin-left: 0px;
+      }
+      header nav ul li {
+        margin: 0 15px;
+      }
+
+      header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+          center/cover no-repeat;
+        height: 100vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 3rem;
+      }
+      .hero p {
+        font-size: 1.25rem;
+        margin-top: 10px;
+      }
+      .hero .cta-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #ff6347;
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        border-radius: 5px;
+      }
+      .hero .cta-btn:hover {
+        background-color: #f43816;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      /* About Section */
+      .about {
+        padding: 4rem 12rem;
+        text-align: center;
+        background-color: #fff;
+      }
+      .about img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-top: 20px;
+      }
+      .about h2 {
+        font-size: 2.5rem;
+      }
+      .about p {
+        font-size: 1.15rem;
+        margin-top: 15px;
+      }
+
+      /* Skills Section */
+      .skills {
+        padding: 4rem 2rem;
+        background-color: #f4f4f4;
+        text-align: center;
+      }
+      .skills h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      .skills ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        /* justify-items: center; */
+      }
+      .skills ul li {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .skills ul li:hover {
+        background-color: #333;
+        color: #fff;
+        animation: fadeIn 1s ease-out;
+        cursor: pointer;
+      }
+
+      /* Contact Section */
+      .contact {
+        padding: 4rem 2rem;
+        text-align: center;
+        background-color: #fff;
+      }
+      .contact h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      .contact form {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .contact form input,
+      .contact form textarea {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .contact form button {
+        padding: 10px 20px;
+        background-color: #ff6347;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .contact form button:hover {
+        background-color: #ff4500;
+      }
+
+      /* Footer */
+      footer {
+        padding: 1rem 2rem;
+        background-color: #333;
+        color: white;
+        text-align: center;
+      }
+      footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Media Query */
+      @media (max-width: 1200px) {
+        .about {
+          padding: 4rem 2rem;
+        }
+        .hero {
+          padding: 0 2rem;
+        }
+      }
+      @media (max-width: 576px) {
+        .skills ul {
+          gap: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div>
+        <h1>Rohit Kumar</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <h1>Hi, I'm Rohit Kumar.</h1>
+      <p>
+        I am a Front-End Software Engineer with experience in technologies like
+        Html, CSS, JavaScript, React, React Native etc.
+      </p>
+      <a href="#contact" class="cta-btn">Contact Me</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate web and mobile developer with experience in building
+        dynamic, responsive, and user-friendly applications. I specialize in
+        front-end and mobile development using <strong>HTML</strong>,
+        <strong>CSS</strong>, <strong>JavaScript</strong>,
+        <strong>React</strong>, and <strong>React Native</strong>. I love
+        solving problems and creating solutions that make users' lives easier.
+      </p>
+      <img
+        src="https://media.licdn.com/dms/image/v2/D5603AQFe_QJRHKvOHg/profile-displayphoto-shrink_400_400/B56ZPzHFKNGQAg-/0/1734950540554?e=1740614400&v=beta&t=OIqLXC0IvFml-Ojx1BxVn719DlL7DIieV8oHgcw5Dqw"
+        alt="My Photo"
+      />
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>React Native</li>
+        <li>Node.js</li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="4"
+          required
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <a
+          href="https://www.linkedin.com/in/rohit-kumar-0621rk/"
+          target="_blank"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/rohit0621" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2024 Rohit Kumar. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
